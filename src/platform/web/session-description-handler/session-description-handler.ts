@@ -83,6 +83,14 @@ export class SessionDescriptionHandler implements SessionDescriptionHandlerDefin
   get localMediaStream(): MediaStream {
     return this._localMediaStream;
   }
+  /**
+   * We need to be able to update these streams
+   *
+   */
+
+  set localMediaStream(newStream: MediaStream) {
+    this.setLocalMediaStream(newStream);
+  }
 
   /**
    * The remote media stream currently being received.
